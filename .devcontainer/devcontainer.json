@@ -1,0 +1,29 @@
+{
+    "name": "University Project Dev Container",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2.5.8": {
+            "version": "latest",
+            "configureZshAsDefaultShell": true
+        },
+        "ghcr.io/devcontainers/features/java:1.8.0": {
+            "version": "21"
+        },
+        "ghcr.io/devcontainer-community/devcontainer-features/collection-c-cpp:1.0.3": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/powershell:2.0.2": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "ms-vscode.cpptools",
+                "ms-vscode.cmake-tools",
+                "ms-vscode.powershell"
+            ]
+        }
+    }
+}

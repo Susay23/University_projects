@@ -49,6 +49,11 @@ create table PHIEUTHU(
     check(THANHTIEN > 0)
 );
 
+CREATE TABLE MONHOC (
+    MAMH VARCHAR(10) PRIMARY KEY,
+    TENMH VARCHAR(50) NOT NULL
+);
+
 create table DIEM(
     MAMH varchar(10) not null,
     MAHV varchar(10) not null,
@@ -56,6 +61,7 @@ create table DIEM(
     DIEM decimal(5,2) not null,
     primary key (MAHV, MALOP, MAMH),
     check(DIEM >= 0 and DIEM <= 10),
+    foreign key (MAMH) references MONHOC(MAMH),
     foreign key (MAHV) references HOCVIEN(MAHV),
     foreign key (MALOP) references LOP(MALOP)
 );

@@ -73,10 +73,10 @@
       "resolved": "ghcr.io/devcontainer-community/devcontainer-features/vcpkg.io@sha256:aa1c839509ab397336da9c187c89b16e5cb85666f1c8756a2919f401ed3b44ae",
       "integrity": "sha256:aa1c839509ab397336da9c187c89b16e5cb85666f1c8756a2919f401ed3b44ae"
     },
-    "ghcr.io/devcontainers/features/common-utils:2.5.8": {
-      "version": "2.5.8",
-      "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:c42fdefe6d737a3a6f61cc52b23c7c9a565d08cc4d9c303669a7cf2ee5fd81fc",
-      "integrity": "sha256:c42fdefe6d737a3a6f61cc52b23c7c9a565d08cc4d9c303669a7cf2ee5fd81fc"
+    "ghcr.io/devcontainers/features/common-utils:2.5.9": {
+      "version": "2.5.9",
+      "resolved": "ghcr.io/devcontainers/features/common-utils@sha256:cb0c4d3c276f157eed17935747e364178d75fee17f55c4e129966f64633deb3a",
+      "integrity": "sha256:cb0c4d3c276f157eed17935747e364178d75fee17f55c4e129966f64633deb3a"
     },
     "ghcr.io/devcontainers/features/java:1.8.0": {
       "version": "1.8.0",
@@ -87,6 +87,11 @@
       "version": "2.0.2",
       "resolved": "ghcr.io/devcontainers/features/powershell@sha256:82ea3880c5706ac3963f1b5e940a7f5871835393a5472f80008148b995d58d61",
       "integrity": "sha256:82ea3880c5706ac3963f1b5e940a7f5871835393a5472f80008148b995d58d61"
+    },
+    "ghcr.io/devcontainers/features/sshd:1.1.0": {
+      "version": "1.1.0",
+      "resolved": "ghcr.io/devcontainers/features/sshd@sha256:f5251b8e4325f68f7280973c6cd65daff414449c66f240621502d4e8e74eb7ee",
+      "integrity": "sha256:f5251b8e4325f68f7280973c6cd65daff414449c66f240621502d4e8e74eb7ee"
     }
   }
 }

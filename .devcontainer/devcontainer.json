@@ -1,8 +1,16 @@
 {
     "name": "University Project Dev Container",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+    "dockerComposeFile": [
+        "docker-compose.yml"
+    ],
+    "service": "devcontainer",
+    "workspaceFolder": "/workspaces/university-projects",
+    "runServices": [
+        "devcontainer",
+        "mssql"
+    ],
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:2.5.8": {
+        "ghcr.io/devcontainers/features/common-utils:2.5.9": {
             "version": "latest",
             "configureZshAsDefaultShell": true
         },
@@ -14,6 +22,9 @@
         },
         "ghcr.io/devcontainers/features/powershell:2.0.2": {
             "version": "latest"
+        },
+        "ghcr.io/devcontainers/features/sshd:1.1.0": {
+            "version": "latest"
         }
     },
     "customizations": {
@@ -22,7 +33,8 @@
                 "vscjava.vscode-java-pack",
                 "ms-vscode.cpptools",
                 "ms-vscode.cmake-tools",
-                "ms-vscode.powershell"
+                "ms-vscode.powershell",
+                "ms-mssql.mssql"
             ]
         }
     }

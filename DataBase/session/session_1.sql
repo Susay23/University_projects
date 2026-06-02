@@ -13,7 +13,7 @@ create table CHUONGTRINH(
 );
 
 create table LOAILOP(
-    MALOP varchar(10) primary key,
+    MALOAI varchar(10) primary key,
     MACT varchar(10) not null,
     TENLOAI varchar(50) not null,
     foreign key (MACT) references CHUONGTRINH(MACT)
@@ -27,7 +27,7 @@ create table LOP( -- lớp học có sĩ số > 12
     MAKH varchar(10) not null,
     MALOAI varchar(10) not null,
     foreign key (MAKH) references KHOAHOC(MAKH),
-    foreign key (MALOAI) references LOAILOP(MALOP),
+    foreign key (MALOAI) references LOAILOP(MALOAI),
 );
 
 create table HOCVIEN(

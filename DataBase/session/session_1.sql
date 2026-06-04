@@ -13,7 +13,7 @@ create table CHUONGTRINH(
 );
 
 create table LOAILOP(
-    MALOP varchar(10) primary key,
+    MALOAI varchar(10) primary key,
     MACT varchar(10) not null,
     TENLOAI varchar(50) not null,
     foreign key (MACT) references CHUONGTRINH(MACT)
@@ -27,7 +27,7 @@ create table LOP(
     MAKH varchar(10) not null,
     MALOAI varchar(10) not null,
     foreign key (MAKH) references KHOAHOC(MAKH),
-    foreign key (MALOAI) references LOAILOP(MALOP),
+    foreign key (MALOAI) references LOAILOP(MALOAI),
 );
 
 create table HOCVIEN(
@@ -49,6 +49,11 @@ create table PHIEUTHU(
     check(THANHTIEN > 0)
 );
 
+CREATE TABLE MONHOC (
+    MAMH VARCHAR(10) PRIMARY KEY,
+    TENMH VARCHAR(50) NOT NULL
+);
+
 create table DIEM(
     MAMH varchar(10) not null,
     MAHV varchar(10) not null,
@@ -56,6 +61,7 @@ create table DIEM(
     DIEM decimal(5,2) not null,
     primary key (MAHV, MALOP, MAMH),
     check(DIEM >= 0 and DIEM <= 10),
+    foreign key (MAMH) references MONHOC(MAMH),
     foreign key (MAHV) references HOCVIEN(MAHV),
     foreign key (MALOP) references LOP(MALOP)
 );

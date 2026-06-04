@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <vector>
 
@@ -12,6 +13,8 @@ void bubbleSort(vector<int>& arr) {
             }
         }
     }
+    int comparisons = n * (n - 1) / 2;
+    cout << "Number of comparisons: " << comparisons << endl;
 }
 
 int readInput(vector<int>& arr) {
@@ -36,6 +39,7 @@ int main(){
     vector<int> arr;
     readInput(arr);
     bubbleSort(arr);
+    
     cout << "Sorted array: ";
     for (int i = 0; i < arr.size(); i++) {
         cout << arr[i] << " ";

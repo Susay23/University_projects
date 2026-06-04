@@ -19,7 +19,7 @@ create table LOAILOP(
     foreign key (MACT) references CHUONGTRINH(MACT)
 );
 
-create table LOP( -- lớp học có sĩ số > 12
+create table LOP(
     MALOP varchar(10) primary key,
     TENLOP varchar(50) not null,
     SISO int not null,

@@ -34,7 +34,7 @@ int readInput(vector<int>& arr) {
 }
 
 int main(){
-    freopen("Ex01_1.inp", "r", stdin);
+    freopen("Ex01_3.inp", "r", stdin);
     vector<int> arr;
     readInput(arr);
     bubbleSort(arr);

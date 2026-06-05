@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 
+
 int readInput()
 {
     int disk;

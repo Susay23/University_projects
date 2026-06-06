@@ -31,7 +31,7 @@ public:
 };
 int main()
 {
-    freopen("ex02_inp.txt", "r", stdin);
+    freopen("ex02.inp", "r", stdin);
     int disk = readInput();
     std::vector<int> A;
     std::vector<int> B;

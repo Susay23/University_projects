@@ -9,7 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/University_projects/Graph Theory/session/session 1/main.cpp" "CMakeFiles/session1.dir/main.cpp.o" "gcc" "CMakeFiles/session1.dir/main.cpp.o.d"
-  "" "session1" "gcc" "CMakeFiles/session1.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

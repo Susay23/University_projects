@@ -12,8 +12,6 @@ int main(){
             graph[i][j] = 0;
         }
     }
-    // 1. read the edges and fill the graph matrix
-    // if there is an edge between up and down, then graph[up][down] = 1 and graph[down][up] = 1
     int up,down;
     for (int i=0; i<=m;i++){
         fscanf(f, "%d%d", &up, &down);

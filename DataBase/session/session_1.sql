@@ -186,3 +186,12 @@ JOIN HOCVIEN hv ON d.MAHV = hv.MAHV
 JOIN MONHOC mh  ON d.MAMH = mh.MAMH
 JOIN LOP l      ON d.MALOP = l.MALOP
 WHERE l.MAKH = 'K001';
+
+--15. Có tất cả bao nhiêu học viên ?
+select COUNT(*) As Soluonghocvien from hocvien
+
+--16. ‘Lớp 1’ Tiếng anh căn bản có bao nhiêu học viên ?
+--17. Tính tổng số tiền đã thu được của ‘Lớp 1’ Tiếng anh căn bản
+--18. Tính tổng số tiền đã thu được của ‘Khoá 1’ ?
+--19. Tính điểm trung bình của học viên 'Đỗ Gia Bảo', sinh ngày 02/12/2001 học ‘Lớp1’ Tiếng anh căn bản ?
+--20. Tìm điểm lớn nhất ?

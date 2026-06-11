@@ -1,5 +1,5 @@
 CMakeFiles/Session_4.dir/main.cpp.o: \
- /workspaces/University_projects/Algorithm\ design\ and\ analysis/Quizz/Session_4\ \ Quick\ Sort/main.cpp \
+ /workspaces/University_projects/Algorithm\ design\ and\ analysis/Quizz/Session_4\ \ Quick\ Sort/the\ partition\ algorithm/main.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

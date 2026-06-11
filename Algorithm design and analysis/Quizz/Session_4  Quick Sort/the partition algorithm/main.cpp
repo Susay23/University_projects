@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int swapcount_lomuto = 0;
+int swapcount_hoare = 0;
 int Partition_lomuto(int A[], int low, int high){
     int pivot = A[high];
     int i = low - 1;
@@ -12,11 +14,13 @@ int Partition_lomuto(int A[], int low, int high){
             int temp = A[i];
             A[i] = A[j];
             A[j] = temp;
+            swapcount_lomuto++;
         }
     }
     int temp_1 = A[i+1];
     A[i+1]=A[high];
     A[high]=temp_1;
+    swapcount_lomuto++;
     return i+1;
 }
 
@@ -36,24 +40,25 @@ int Partition_hoare(int A[], int low, int high){
         int temp = A[i];
             A[i] = A[j];
             A[j] = temp;
+        swapcount_hoare++;
     }
 }
 
-void quicksort(int A[], int low, int high){
+void quicksort_2(int A[], int low, int high){
     if(low < high){
         int p = Partition_hoare(A,low,high);
-        quicksort(A,low,p);
-        quicksort(A,p+1,high);
+        quicksort_2(A,low,p);
+        quicksort_2(A,p+1,high);
     }
 }
 
-// void quicksort(int A[], int low, int high){
-//     if(low < high){
-//         int p = Partition_lomuto(A,low,high);
-//         quicksort(A,low,p-1);
-//         quicksort(A,p+1,high);
-//     }
-// }
+void quicksort_1(int A[], int low, int high){
+    if(low < high){
+        int p = Partition_lomuto(A,low,high);
+        quicksort_1(A,low,p-1);
+        quicksort_1(A,p+1,high);
+    }
+}
 
 void printArray(int A[], int n){
     for(int i = 0; i < n; i++)
@@ -62,32 +67,41 @@ void printArray(int A[], int n){
 }
 
 int main(){
-    // Test 1: mảng bình thường
-    int a[] = {3, 6, 8, 10, 1, 2, 1};
-    int n = sizeof(a) / sizeof(a[0]);
-    cout << "Truoc: "; printArray(a, n);
-    quicksort(a, 0, n-1);
-    cout << "Sau:   "; printArray(a, n);
+    freopen("ex01.inp", "r", stdin);
+    
+    int n;
+    cin >> n;
+    int A[n],B[n];
+    for(int i = 0; i < n; i++){
+        cin >> A[i];
+        B[i] = A[i];
+    } 
+    cout << "Truoc: ";
+    for(int i = 0; i < n; i++) cout << A[i] << " ";
+    cout << endl;
 
-    // Test 2: mảng đã sorted
-    int b[] = {1, 2, 3, 4, 5};
-    int m = sizeof(b) / sizeof(b[0]);
-    cout << "\nTruoc: "; printArray(b, m);
-    quicksort(b, 0, m-1);
-    cout << "Sau:   "; printArray(b, m);
+    quicksort_1(A, 0, n-1);
 
-    // Test 3: mảng reverse sorted
-    int c[] = {5, 4, 3, 2, 1};
-    int k = sizeof(c) / sizeof(c[0]);
-    cout << "\nTruoc: "; printArray(c, k);
-    quicksort(c, 0, k-1);
-    cout << "Sau:   "; printArray(c, k);
+    cout << "Sau:   ";
+    for(int i = 0; i < n; i++) cout << A[i] << " ";
+    cout << endl;
 
-    // Test 4: mảng 1 phần tử
-    int d[] = {42};
-    cout << "\nTruoc: "; printArray(d, 1);
-    quicksort(d, 0, 0);
-    cout << "Sau:   "; printArray(d, 1);
+    cout << "Swap Count in lomuto: " << swapcount_lomuto << endl;
+
+    for(int i = 0; i < n; i++)
+        cin >> B[i];
+    
+    cout << "Truoc: ";
+    for(int i = 0; i < n; i++) cout << B[i] << " ";
+    cout << endl;
+
+    quicksort_2(B, 0, n-1);
+
+    cout << "Sau:   ";
+    for(int i = 0; i < n; i++) cout << B[i] << " ";
+    cout << endl;
+
+    cout << "Swap Count in hoare: " << swapcount_hoare << endl;
 
     return 0;
 }

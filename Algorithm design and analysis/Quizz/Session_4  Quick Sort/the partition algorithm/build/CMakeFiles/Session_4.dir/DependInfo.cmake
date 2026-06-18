@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_4  Quick Sort/the partition algorithm/main.cpp" "CMakeFiles/Session_4.dir/main.cpp.o" "gcc" "CMakeFiles/Session_4.dir/main.cpp.o.d"
+  "" "Session_4" "gcc" "CMakeFiles/Session_4.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,0 +1,9 @@
+Quick selection is an algorithm to find the k smallest element in an ordered array. The         |
+algorithm is similar to quick sort that after the pivot is found, the algorithm recurs only     |
+the part which contains the k smallest element. Compute the complexity of the algorithm         |
+in 3 cases:                                                                                     |
+a. The best case.                                                                               |
+b. The worst case.                                                                              |
+c. The expected case with randomized partition.                                                 |                                                                                               |
+-------------------------------------------------------------------------------------------------
+

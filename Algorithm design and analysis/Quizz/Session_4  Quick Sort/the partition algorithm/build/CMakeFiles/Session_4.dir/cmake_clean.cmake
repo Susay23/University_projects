@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Session_4.dir/link.d"
   "CMakeFiles/Session_4.dir/main.cpp.o"
   "CMakeFiles/Session_4.dir/main.cpp.o.d"
   "Session_4"

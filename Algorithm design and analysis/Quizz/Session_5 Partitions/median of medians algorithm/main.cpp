@@ -51,7 +51,7 @@ int Partition(int A[], int low, int high){
 //         A[j + 1] = key
 
 void insertionSort(int A[], int low, int high) {
-    for(int i = low + 1; i < high; i++){
+    for(int i = low + 1; i <= high; i++){
         int key = A[i];
         int j = i -1;
         while(j>=low && A[j]>key){
@@ -72,7 +72,7 @@ void insertionSort(int A[], int low, int high) {
 int FindIndex(int A[], int low, int high, int Value){
     for(int i = low; i <= high; i ++){
         if(A[i] == Value){
-            return 1;
+            return i;
         }
     }
     return -1;
@@ -126,11 +126,11 @@ int Select(int A[], int low, int high, int k){
     int numGroup = (n+4)/5;
     int* medians = new int[numGroup];
 
-    for(int i = 0; i < numGroup - 1; i++){
+    for(int i = 0; i < numGroup; i++){
         int grouplow = low+i*5;
         int grouphigh = min(grouplow+4,high);
         insertionSort(A,grouplow,grouphigh);
-        int mediansPos = grouplow + (grouplow - grouphigh)/2;
+        int mediansPos = grouplow + (grouphigh - grouplow)/2;
         medians[i] = A[mediansPos]; 
     }
 

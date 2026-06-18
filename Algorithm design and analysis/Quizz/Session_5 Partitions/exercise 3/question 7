@@ -1,0 +1,18 @@
+The randomized selection is used to find the smallest element of the array A[9, 1, 3,           |
+0, 7, 5, 6, 8, 4, 2]. Describe a sequence of partitions that results in the worst case of the   |
+algorithm.                                                                                      |
+-------------------------------------------------------------------------------------------------
+
+The worst case occurs when every pivot chosen is the minimum or maximum element of the current subarray → partition eliminates only 1 element per step. 
+In this case, it falls into the smallest number. Array: A = [9, 1, 3, 0, 7, 5, 6, 8, 4, 2], finding the smallest element (k=1).
+Step 1 — 10 elements, Pivot = 0 (min), Compare the value of 10 operations. 
+0 is the minimum, rank=1. If k>1: recursively apply to the remaining 9 elements to the right.
+Step 2 — 9 elements, pivot = 1 (min), takes 9 comparisons → Recursion 8 remaining points
+Step 3 — 8 elements, pivot = 2 (min), takes 8 comparisons → recursion 7 remaining points
+Step 4 — 7 elements, pivot = 3 (min), takes 7 comparisons → Recursively solve the remaining 6 problems
+Step 5 — 6 elements, pivot = 4 (min), takes 6 comparisons → continue...
+
+
+The worst-case partition sequence is: each time the random choice "unluckily" picks the minimum element as pivot. 
+After partition, the pivot ends up at position 0, all n−1 remaining elements fall to the right, forcing recursion into n−1 elements → T(n) = T(n−1) + O(n) = O(n²).
+

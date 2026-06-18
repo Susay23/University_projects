@@ -7,3 +7,41 @@ b. The worst case.                                                              
 c. The expected case with randomized partition.                                                 |                                                                                               |
 -------------------------------------------------------------------------------------------------
 
+Quick selection: similar to Quick Sort, but after partitioning, we only recurse into
+one side containing the k-th smallest element, discarding the other.
+
+Pseudocode:
+
+QuickSelect(A, left, right, k);
+if left == right:
+    return A[left]
+
+    pivotIndex = Partition(A,left,right)
+    rank = pivotIndex - left + 1 // rank of pivot in current segment
+    if k == rank:
+        return A[pivotIndex]
+    else if k < rank:
+        return QuickSelect(A,left,pivotIndex-1,k)
+    else:
+        return QuickSelect(A,pivotIndex+1,right,k-rank)
+-----------------------------------------------------------------------
+
+a. Best case - O(n)
+The pivot alawys lands exactly at the target position. Each recursive call 
+halves the array:
+
+T(n) = T(n/2) + T(n) => T(n) = O(n)
+-> The sum n + n/2 + n/4 + .... -> O(n)
+
+b. Worst case - O(n^2)
+The pivot is alawys the smallest or largest element:
+
+T(n) = T(n - 1) + O(n) => T(n) = O(n^2)
+-> The sum T(n)=n+(n−1)+(n−2)+…+1=n(n+1)/2​=O(n^2)
+
+c. Expected Case - O(n)
+With a random pivot, each step eliminates a fixed fraction of the arrayy on average:
+
+T(n)=T(3n/4)+O(n)⇒T(n)=O(n) (Following Master Theorem, case 3)
+-> The sum T(n)=n+3n/4​+(3/4​)^2*n+…=n⋅1/(1-3/41)​=4n=O(n)
+This can be proven more rigorously via expected value analysis: E[T(n)]=O(n).

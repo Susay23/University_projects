@@ -1,0 +1,16 @@
+Cây khung có trọng lượng nhỏ nhất (Cây có hướng) -> Thuật toán Chu-Liu
+-> PHA CO
+--bước 1
+Xây dựng đồ thị xấp xỉ H0:
+ta sẽ tìm mũi tên chỉ vào đỉnh có trọng số nhỏ nhất ở mỗi đỉnh
+--bước 2
+Co đồ thị G0 thành G1:
+co chu trình lại nếu là cung từ chu trình đi ra thì ko đổi, còn cung đi vào thì trừ với min
+-- bước 3
+lặp lại bước 1,2 đến khi ko còn tồn tại chu trình
+
+-> PHA GIÃN
+-- trả lại toàn bộ những đỉnh theo giá trị đã chọn
+
+Cây khung có trọng lượng nhỏ nhất (Cây vô hướng) ->  thuật toán Kruskal 
+

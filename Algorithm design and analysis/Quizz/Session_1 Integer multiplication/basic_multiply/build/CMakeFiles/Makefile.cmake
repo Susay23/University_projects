@@ -35,7 +35,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-4.2/Modules/Platform/Linux-Initialize.cmake"
   "/usr/share/cmake-4.2/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-4.2/Modules/Platform/UnixPaths.cmake"
-  "/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_5 Partitions/median of medians algorithm/CMakeLists.txt"
+  "/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_1 Integer multiplication/basic_multiply/CMakeLists.txt"
   "CMakeFiles/4.2.3/CMakeCCompiler.cmake"
   "CMakeFiles/4.2.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/4.2.3/CMakeSystem.cmake"
@@ -54,5 +54,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Session_5.dir/DependInfo.cmake"
+  "CMakeFiles/Session_1.dir/DependInfo.cmake"
   )

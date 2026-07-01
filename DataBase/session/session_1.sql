@@ -12,7 +12,7 @@
 --1. Create tables
 create table KHOAHOC(
     MAKH varchar(10) primary key,
-    TENKH nvarchar2(50) not null,
+    TENKH nvarchar(50) not null,
     NGAYBD date not null,
     NGAYKT date not null,
     check (NGAYKT > NGAYBD)
@@ -20,19 +20,19 @@ create table KHOAHOC(
 
 create table CHUONGTRINH(
     MACT varchar(10) primary key,
-    TENCT nvarchar2(50) not null
+    TENCT nvarchar(50) not null
 );
 
 create table LOAILOP(
     MALOAI varchar(10) primary key,
     MACT varchar(10) not null,
-    TENLOAI nvarchar2(50) not null,
+    TENLOAI nvarchar(50) not null,
     foreign key (MACT) references CHUONGTRINH(MACT)
 );
 
 create table LOP(
     MALOP varchar(10) primary key,
-    TENLOP nvarchar2(50) not null,
+    TENLOP nvarchar(50) not null,
     SISO int not null,
     check (SISO > 12),
     MAKH varchar(10) not null,
@@ -43,12 +43,12 @@ create table LOP(
 
 create table HOCVIEN(
     MAHV varchar(10) primary key,
-    TENHV nvarchar2(50) not null,
+    TENHV nvarchar(50) not null,
     GIOITINH varchar(10) not null,
     check(GIOITINH in ('0', '1')),
     NGAYSINH date not null,
     SDT varchar(15) not null,
-    DIACHI nvarchar2(100) not null
+    DIACHI nvarchar(100) not null
 );
 
 create table PHIEUTHU(
@@ -62,7 +62,7 @@ create table PHIEUTHU(
 
 CREATE TABLE MONHOC (
     MAMH VARCHAR(10) PRIMARY KEY,
-    TENMH nVARCHAR2(50) NOT NULL
+    TENMH nVARCHAR(50) NOT NULL
 );
 
 create table DIEM(
@@ -117,17 +117,18 @@ INSERT INTO LOAILOP VALUES('LL013','CT002',N'Tiếng Anh tổng quát dành cho 
 INSERT INTO LOAILOP VALUES('LL014','CT002',N'Tiếng Anh nâng cao');
 INSERT INTO LOAILOP VALUES('LL015','CT002',N'IELTS');
 -----------------------------------------------------------------------------------------------
-INSERT INTO LOP VALUES ('L001','LL001',N'Lớp 1','30','K001');
-INSERT INTO LOP VALUES ('L002','LL001',N'Lớp 2','30','K001');
-INSERT INTO LOP VALUES ('L003','LL002',N'Lớp 1','25','K001');
+INSERT INTO LOP (MALOP, TENLOP, SISO, MAKH, MALOAI) VALUES
+('L001', N'Lớp 1', 30, 'K001', 'LL001'),
+('L002', N'Lớp 2', 30, 'K001', 'LL001'),
+('L003', N'Lớp 1', 25, 'K001', 'LL002');
 -----------------------------------------------------------------------------------------------
 INSERT INTO HOCVIEN VALUES('HV0001',N'Đỗ Bình An',1,'2000-11-02','0917217036',N'Cờ Đỏ - Cần Thơ');
 INSERT INTO HOCVIEN VALUES('HV0002',N'Đỗ Gia Bảo',1,'2001-12-02','0917217036',N'Ôn Môn- Cần Thơ');
 INSERT INTO HOCVIEN VALUES('HV0003',N'Đỗ Phúc Vinh',1,'2002-11-02','0917217036',N'Cù Lao Dung - Sóc Trăng');
 INSERT INTO HOCVIEN VALUES('HV0004',N'Thạch Chí Tâm',1,'2000-01-02','0917217036',N'Châu Thành- An Giang');
-INSERT INTO HOCVIEN VALUES('HV0005',N'Lê Cẩm Giao','0',to_date('2000-11-05','yyyy-mm-dd'),'0917217036',N'Phong Điền- Cần Thơ');
-INSERT INTO HOCVIEN VALUES('HV0006',N'Huỳnh Gia Bảo','1',to_date('2000-11-02','yyyy-mm-dd'),'0917217036',N'Phong Điền- Cần Thơ');
-INSERT INTO HOCVIEN VALUES('HV0007',N'Đỗ An Nhiên','0',to_date('2001-01-02','yyyy-mm-dd'),'0917217036',N'Phong Điền- Cần Thơ');
+INSERT INTO HOCVIEN VALUES('HV0005', N'Lê Cẩm Giao', '0', '2000-11-05', '0917217036', N'Phong Điền- Cần Thơ');
+INSERT INTO HOCVIEN VALUES('HV0006', N'Huỳnh Gia Bảo', '1', '2000-11-02', '0917217036', N'Phong Điền- Cần Thơ');
+INSERT INTO HOCVIEN VALUES('HV0007', N'Đỗ An Nhiên', '0', '2001-01-02', '0917217036', N'Phong Điền- Cần Thơ');
 INSERT INTO HOCVIEN VALUES('HV0008',N'Trần Hoàng Uyên Anh',0,'2002-11-02','0917217036',N'Phong Điền- Cần Thơ');
 INSERT INTO HOCVIEN VALUES('HV0009',N'Trấn Thành',1,'1998-07-02','0917217036',N'Phong Điền- Cần Thơ');
 INSERT INTO HOCVIEN VALUES('HV0010',N'Trịnh Giai Nhân',1,'2000-11-02','0917217036',N'Châu Thành- An Giang');

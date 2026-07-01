@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<iostream>
+#include <vector>
 
 using namespace std;
 
@@ -71,16 +72,21 @@ int main(){
     
     int n;
     cin >> n;
-    int A[n],B[n];
+
+    // Đổi VLA thành vector
+    vector<int> A(n), B(n);
+
     for(int i = 0; i < n; i++){
         cin >> A[i];
-        B[i] = A[i];
-    } 
+        B[i] = A[i];  // copy sang B ngay từ đầu
+    }
+
+    // --- Lomuto ---
     cout << "Truoc: ";
     for(int i = 0; i < n; i++) cout << A[i] << " ";
     cout << endl;
 
-    quicksort_1(A, 0, n-1);
+    quicksort_1(A.data(), 0, n-1);
 
     cout << "Sau:   ";
     for(int i = 0; i < n; i++) cout << A[i] << " ";
@@ -88,14 +94,14 @@ int main(){
 
     cout << "Swap Count in lomuto: " << swapcount_lomuto << endl;
 
-    for(int i = 0; i < n; i++)
-        cin >> B[i];
-    
+    // --- Hoare ---
+    // BỎ vòng cin >> B[i] ở đây, B đã có dữ liệu từ đầu
+
     cout << "Truoc: ";
     for(int i = 0; i < n; i++) cout << B[i] << " ";
     cout << endl;
 
-    quicksort_2(B, 0, n-1);
+    quicksort_2(B.data(), 0, n-1);
 
     cout << "Sau:   ";
     for(int i = 0; i < n; i++) cout << B[i] << " ";

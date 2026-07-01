@@ -1,0 +1,10 @@
+^C:\USERS\BUITU\SOUCRE\UNIVERSITY_PROJECTS\ALGORITHM DESIGN AND ANALYSIS\QUIZZ\SESSION_4  QUICK SORT\THE PARTITION ALGORITHM\BUILD\CMAKEFILES\76141E458ADE8F71BF1272A6AA6245C4\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" "-SC:/Users/buitu/Soucre/University_projects/Algorithm design and analysis/Quizz/Session_4  Quick Sort/the partition algorithm" "-BC:/Users/buitu/Soucre/University_projects/Algorithm design and analysis/Quizz/Session_4  Quick Sort/the partition algorithm/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/buitu/Soucre/University_projects/Algorithm design and analysis/Quizz/Session_4  Quick Sort/the partition algorithm/build/QuickSort.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

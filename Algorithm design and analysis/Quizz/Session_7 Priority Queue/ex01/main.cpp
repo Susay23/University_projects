@@ -36,7 +36,7 @@ void solve(){
 }
 
 int main(){
-    freopen("ex01_02.inp","r",stdin);
+    freopen("ex01_04.inp","r",stdin);
     solve();
     return 0;
 }

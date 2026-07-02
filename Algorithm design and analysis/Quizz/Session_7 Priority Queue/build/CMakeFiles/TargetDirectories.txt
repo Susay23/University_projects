@@ -1,3 +1,0 @@
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_7 Priority Queue/build/CMakeFiles/Session_7.dir
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_7 Priority Queue/build/CMakeFiles/edit_cache.dir
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_7 Priority Queue/build/CMakeFiles/rebuild_cache.dir

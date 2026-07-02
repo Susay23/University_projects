@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_7 Priority Queue/main.cpp" "CMakeFiles/Session_7.dir/main.cpp.o" "gcc" "CMakeFiles/Session_7.dir/main.cpp.o.d"
+  "/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_7 Priority Queue/ex01/main.cpp" "CMakeFiles/Session_7.dir/main.cpp.o" "gcc" "CMakeFiles/Session_7.dir/main.cpp.o.d"
   "" "Session_7" "gcc" "CMakeFiles/Session_7.dir/link.d"
   )
 

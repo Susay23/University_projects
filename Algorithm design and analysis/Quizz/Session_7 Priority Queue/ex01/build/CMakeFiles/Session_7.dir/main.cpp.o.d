@@ -1,5 +1,5 @@
 CMakeFiles/Session_7.dir/main.cpp.o: \
- /workspaces/University_projects/Algorithm\ design\ and\ analysis/Quizz/Session_7\ Priority\ Queue/main.cpp \
+ /workspaces/University_projects/Algorithm\ design\ and\ analysis/Quizz/Session_7\ Priority\ Queue/ex01/main.cpp \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

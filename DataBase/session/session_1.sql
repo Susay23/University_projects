@@ -406,7 +406,7 @@ Select Avg(DIEM) As diemtrungbinhcuabao From DIEM D
 join HOCVIEN hv on D.MAHV = hv.MAHV
 join LOP L on D.MALOP = L.MALOP
 join LOAILOP LL on L.MALOAI = LL.MALOAI
-where hv.TENHV = N'Do Gia Bao' and L.TENLOP = N'Lớp 1' And LL.TENLOAI = N'Tiếng Anh cơ bản'
+where hv.TENHV = N'Đỗ Gia Bảo' and L.TENLOP = N'Lớp 1' And LL.TENLOAI = N'Tiếng Anh cơ bản'
 
 --20. Tìm điểm lớn nhất ?
 

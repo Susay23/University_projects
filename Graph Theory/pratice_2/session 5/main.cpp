@@ -1,10 +1,10 @@
-// Cho một đồ thị vô hướng đơn. Hãy in ra thứ tự của các đỉnh khi duyệt đồ thị theo chiều sâu (sử dụng NGĂN XẾP) bắt đầu từ đỉnh 1.
+// Cho một đồ thị vô hướng đơn. Hãy dựng (các) cây DUYỆT ĐỒ THỊ khi duyệt đồ thị theo chiều sâu (dùng NGĂN XẾP) bắt đầu từ đỉnh 1.
 
 // Nếu đồ thị không liên thông, sau khi duyệt xong lần 1, tìm đỉnh có chỉ số nhỏ nhất chưa duyệt mà duyệt nó, và cứ tiếp tục như thế cho đến khi tất cả các đỉnh đều được duyệt.
 
 // Quy ước:
 
-// Các đỉnh kề của 1 đỉnh được liệt kê theo thứ tự tăng dần.
+// Các đỉnh kề của 1 đỉnh được liệt kê theo thứ tự tăng dần
 
 
 // Đầu vào (Input):
@@ -16,10 +16,31 @@
 
 // Đầu ra (Output):
 
-// In ra các đỉnh theo thứ tự duyệt, mỗi đỉnh trên 1 dòng.
+// In ra cây duyệt đồ thị theo định dạng:
+
+// 1 <đỉnh cha của 1>
+// 2 <đỉnh cha của 2>
+// ....
+// i <đỉnh cha của i>
+// ...
+// n <đỉnh cha của n>
+
+// Quy ước: Nếu 1 đỉnh không có đỉnh cha (nó là đỉnh gốc của cây) thì đỉnh cha của nó là 0.
 
 // Xem thêm các ví dụ bên dưới.
 
+
+
+// Gợi ý:
+
+// Sử dụng mảng parent[u] để lưu đỉnh cha của đỉnh u.
+// Trong quá trình duyệt, thay vì in các đỉnh ra màn hình, ghi nhận lại đỉnh cha của các đỉnh.
+// Sử dụng 1 stack lưu các cặp <u, parent>. Khi xét đỉnh v (là kề của u) để đưa vào stack, ta đưa cả <v, u> vào stack. Lúc này u được xem như là parent của v.
+// typedef struct {
+//     int u;
+//     int parent;
+// } ELEMENT_TYPE;
+// Khi duyệt xong lần lượt in ra u và parent[u] (u chạy từ 1 đến n).
 
 
 // Hướng dẫn đọc dữ liệu và chạy thử chương trình
@@ -36,11 +57,7 @@
 // 		scanf("%d%d", &u, &v);
 // 		add_edge(&G, u, v);
 // 	}
-
-
 // For example:
-
-// Input	Result
 // 13 16
 // 1 4
 // 1 2

@@ -1,1 +1,0 @@
-/usr/bin/c++ "CMakeFiles/mid-term.dir/main.cpp.o" -o mid-term 

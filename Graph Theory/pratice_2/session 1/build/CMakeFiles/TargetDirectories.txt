@@ -1,3 +1,0 @@
-/workspaces/University_projects/Graph Theory/pratice_2/session 1/build/CMakeFiles/session_1.dir
-/workspaces/University_projects/Graph Theory/pratice_2/session 1/build/CMakeFiles/edit_cache.dir
-/workspaces/University_projects/Graph Theory/pratice_2/session 1/build/CMakeFiles/rebuild_cache.dir

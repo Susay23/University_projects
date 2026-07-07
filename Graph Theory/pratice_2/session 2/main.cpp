@@ -46,12 +46,12 @@ typedef struct{
 }stack;
 
 void make_null(stack *s){
-    s->current == -1;
+    s->current = -1;
 }
 
 void push(stack *s, int x){
     s->current++;
-    s->data[s->current] == x;
+    s->data[s->current] = x;
 }
 
 int pop(stack *s){
@@ -91,13 +91,12 @@ void DPS(Graph G, int x, int visited[]){
         }
         visited[u] = 1;
         printf("%d\n",u);
-        for(int v = 1; v<=G.n;v++){
+        for(int v = G.n; v>=1;v--){
             if(G.A[u][v]&&visited[v]==0){
                 push(&s,v);
             }
         }
     }
-
 }
 
 int main(){
@@ -112,8 +111,10 @@ int main(){
 		add_edge(&G, u, v);
 	}
 
-    int visited[101];
-    for(int i=1; i<=m;i++){
-        DPS(G,i,visited);
+    int visited[101] = {0};
+    for(int i= 1; i<=n;i++){
+        if(visited[i] == 0){
+            DPS(G,i,visited);
+        }
     }
 }

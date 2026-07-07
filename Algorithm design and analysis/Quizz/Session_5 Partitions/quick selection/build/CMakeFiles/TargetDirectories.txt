@@ -1,3 +1,0 @@
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_5 Partitions/quick selection/build/CMakeFiles/Session_5.dir
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_5 Partitions/quick selection/build/CMakeFiles/edit_cache.dir
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_5 Partitions/quick selection/build/CMakeFiles/rebuild_cache.dir

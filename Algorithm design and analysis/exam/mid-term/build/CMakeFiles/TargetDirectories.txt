@@ -1,3 +1,0 @@
-/workspaces/University_projects/Algorithm design and analysis/exam/mid-term/build/CMakeFiles/mid-term.dir
-/workspaces/University_projects/Algorithm design and analysis/exam/mid-term/build/CMakeFiles/edit_cache.dir
-/workspaces/University_projects/Algorithm design and analysis/exam/mid-term/build/CMakeFiles/rebuild_cache.dir

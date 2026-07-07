@@ -1,3 +1,0 @@
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_4  Quick Sort/the partition algorithm on a linked list./build/CMakeFiles/Session_4.dir
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_4  Quick Sort/the partition algorithm on a linked list./build/CMakeFiles/edit_cache.dir
-/workspaces/University_projects/Algorithm design and analysis/Quizz/Session_4  Quick Sort/the partition algorithm on a linked list./build/CMakeFiles/rebuild_cache.dir

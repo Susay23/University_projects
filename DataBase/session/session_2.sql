@@ -1,3 +1,4 @@
+-- Cho lược đồ cơ sở dữ liệu về thư viện như sau:
 -- TACPHAM(NT, tua, tacgia)
 -- DOCGIA (ND, ho, ten, dchi, tel)
 -- SACH (NS, nxb, NT)
@@ -113,85 +114,38 @@ INSERT INTO SACH VALUES (27, N'FOLIO', 11);
 INSERT INTO SACH VALUES (28, N'FOLIO', 12);
 INSERT INTO SACH VALUES (29, N'GF', 1);
 INSERT INTO SACH VALUES (30, N'HACHETTE', 14);
--- MUON
 
-INSERT INTO MUON VALUES (1,'9-2-2007','9-16-2007','9-7-2007',1);
-INSERT INTO MUON VALUES (1,'10-1-2006','10-15-2006','10-11-2006',26);
-INSERT INTO MUON VALUES (1,'6-14-2007','6-28-2007','6-19-2007',2);
-
-INSERT INTO MUON VALUES (1,'4-27-2007','5-11-2007','5-8-2007',3);
-INSERT INTO MUON VALUES (2,'8-23-2007','9-6-2007','9-2-2007',4);
-INSERT INTO MUON VALUES (2,'10-6-2007','10-20-2007', NULL,28);
-
-INSERT INTO MUON VALUES (9,'10-6-2007','10-20-2007', NULL,28);
-INSERT INTO MUON VALUES (3,'9-9-2007','9-23-2007','9-13-2007',3);
-INSERT INTO MUON VALUES (4,'2-8-2007','2-22-2007','2-12-2007',12);
-INSERT INTO MUON VALUES (4,'2-7-2006','2-21-2006','2-20-2006',4);
-
-INSERT INTO MUON VALUES (4,'6-17-2007','7-1-2007','6-27-2007',5);
-INSERT INTO MUON VALUES (5,'10-4-2007','10-19-2007', NULL,16);
-INSERT INTO MUON VALUES (6,'3-11-2007','3-25-2007','3-16-2007',3);
-
-INSERT INTO MUON VALUES (8,'7-14-2007','7-28-2007','7-20-2007',18);
-INSERT INTO MUON VALUES (8,'3-9-2007','3-23-2007','3-27-2007',13);
-
-INSERT INTO MUON VALUES (10,'4-11-2007','4-25-2007','4-23-2007',8);
-INSERT INTO MUON VALUES (10,'1-27-2006','2-10-2006','1-31-2006',7);
-INSERT INTO MUON VALUES (11,'10-1-2007','10-15-2007', NULL,22);
-
-INSERT INTO MUON VALUES (12,'3-3-2003','3-17-2003','3-13-2003',7);
-INSERT INTO MUON VALUES (14,'10-2-2007','10-16-2007', NULL,1);
-INSERT INTO MUON VALUES (15,'5-4-2007','5-18-2007','5-12-2007',10);
-
-INSERT INTO MUON VALUES (16,'10-5-2007','10-19-2007', NULL,2);
-INSERT INTO MUON VALUES (18,'7-4-2007','7-18-2007','7-11-2007',3);
-INSERT INTO MUON VALUES (20,'12-17-2006','12-31-2006','12-17-2006',27);
-
-INSERT INTO MUON VALUES (20,'9-6-2007','9-20-2007','9-22-2007',9);
-INSERT INTO MUON VALUES (21,'9-7-2007','9-21-2007','9-19-2007',14);
-INSERT INTO MUON VALUES (24,'2-14-2007','2-28-2007','2-20-2007',26);
-INSERT INTO MUON VALUES (25,'8-19-2006','9-2-2006','9-3-2006',1);
-INSERT INTO MUON VALUES (26,'11-15-2006','11-29-2006','11-22-2006',9);
-INSERT INTO MUON VALUES (29,'9-20-2007','10-4-2007', NULL,27);
+------------------------------------------------------------- 
+-- +-------------------+              +-------------------+--
+-- |     TACPHAM       |              |      DOCGIA       |--
+-- +-------------------+              +-------------------+--
+-- | PK | MaTacPham    |              | PK | MaDocGia     |--
+-- |    | TenTacPham   |              |    | Ho           |--
+-- |    | TacGia       |              |    | Ten          |--
+-- +-------------------+              |    | DChi         |--
+--           |                        |    | DThoai       |--
+--           | 1                      +-------------------+--
+--           |                                  |          --
+--           | N                                | 1        --
+-- +-------------------+                        |          --
+-- |       SACH        |                        |          --
+-- +-------------------+                        |          --
+-- | PK | MaSach       |                        |          --
+-- |    | NhaXuatBan   |                        | N        --
+-- | FK | MaTacPham    | -------------> [ BẢNG TRUNG GIAN ]--
+-- +-------------------+                 (Nếu có: MUON_TRA)--
+--                                       - MaDocGia (FK)   --
+--                                       - MaSach (FK)     --
+-------------------------------------------------------------
 
 -- 1) Xem dữ liệu của tất cả các bảng
-select * from TACPHAM;
-select * from DOCGIA;
-select * from SACH;
-select * from MUON;
 -- 2) Vẽ sơ đồ liên thông
--- +-------------------+              +-------------------+
--- |     TACPHAM       |              |      DOCGIA       |
--- +-------------------+              +-------------------+
--- | PK | MaTacPham    |              | PK | MaDocGia     |
--- |    | TenTacPham   |              |    | Ho           |
--- |    | TacGia       |              |    | Ten          |
--- +-------------------+              |    | DChi         |
---           |                        |    | DThoai       |
---           | 1                      +-------------------+
---           |                                  |
---           | N                                | 1
--- +-------------------+                        |
--- |       SACH        |                        |
--- +-------------------+                        |
--- | PK | MaSach       |                        |
--- |    | NhaXuatBan   |                        | N
--- | FK | MaTacPham    | ---------------> [ BẢNG TRUNG GIAN ]
--- +-------------------+                    (Nếu có: MUON_TRA)
---                                          - MaDocGia (FK)
---                                          - MaSach (FK)
---                                          - NgayMuon
 -- 3) Các tác phẩm (NT, tựa) của tác giả 'Guy de Maupassant'.
-select NT, tua from TACPHAM where tacgia = 'Guy de Maupassant';
 -- 4) Các độc giả sống ở địa chỉ '32 rue des Alouettes, 75003 Paris'.
-select * from DOCGIA where dchi = '32 rue des Alouettes, 75003 Paris';
 -- 5) Tìm tên nhà xuất bản các tác phẩm bao gồm từ 'Fleur'
-select nxb from SACH WHERE NT in (select nt from TACPHAM where tua like '%Fleur%');
 -- 6) Tìm tên các tác phẩm bắt đầu bằng 'Le'
-select tua from TACPHAM where tua like 'Le%';
 -- 7) Tìm tên các độc giả có mượn sách trong trong khoảng thời gian từ ngày 15/9/2007 đến
 -- 20/09/2007
-select * from DOCGIA where EXISTS(SELECT * from MUON where ngaymuon BETWEEN '2007-09-15' AND '2007-09-20');
 -- 8) Nhà xuất bản của tác phẩm tiêu đề 'Germinal'.
 -- 9) Tên độc giả đã mượn tác phẩm 'Poésie'.
 -- 10) Những độc giả nào đã mượn tác phẩm Les 'Fleurs du mal'

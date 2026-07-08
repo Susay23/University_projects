@@ -299,131 +299,131 @@ from (select t2.stt_ctr, count(*) as members
 -- 31. Tìm các cặp tên của các công nhân có lamg việc chung với nhau trong ít nhất là hai công
 -- trình
 
--- 21
-select tinh_thanh, avg(kinh_phi) tb
-from cgtrinh
-group by tinh_thanh 
+-- -- 21
+-- select tinh_thanh, avg(kinh_phi) tb
+-- from cgtrinh
+-- group by tinh_thanh 
 
--- 22
-select * from thamgia
+-- -- 22
+-- select * from thamgia
 
-select ten_ctr
-from thamgia  t join cgtrinh c on c.stt_ctr=t.stt_ctr
-where hoten_cn='nguyen hong van' 
-    and 'Dec-18-1994' between ngay_tgia and ngay_tgia + so_ngay;
+-- select ten_ctr
+-- from thamgia  t join cgtrinh c on c.stt_ctr=t.stt_ctr
+-- where hoten_cn='nguyen hong van' 
+--     and 'Dec-18-1994' between ngay_tgia and ngay_tgia + so_ngay;
 
--- 23
-select distinct hoten_kts
-from cgtrinh c join  thietke k on k.stt_ctr=c.stt_ctr 
-where ten_thau='phong dich vu so xd' 
-and hoten_kts IN
-		(select distinct hoten_kts
-		from cgtrinh c join  thietke k on k.stt_ctr=c.stt_ctr 
-		where ten_thau='cty xd so 6');
+-- -- 23
+-- select distinct hoten_kts
+-- from cgtrinh c join  thietke k on k.stt_ctr=c.stt_ctr 
+-- where ten_thau='phong dich vu so xd' 
+-- and hoten_kts IN
+-- 		(select distinct hoten_kts
+-- 		from cgtrinh c join  thietke k on k.stt_ctr=c.stt_ctr 
+-- 		where ten_thau='cty xd so 6');
 		
--- CÃ¡ch khÃ¡c:
-select distinct hoten_kts
-from cgtrinh c join  thietke k on k.stt_ctr=c.stt_ctr 
-where ten_thau='phong dich vu so xd' 
-INTERSECT -- phÃ©p giao táº­p há»£p
-select distinct hoten_kts
-from cgtrinh c join  thietke k on k.stt_ctr=c.stt_ctr 
-where ten_thau='cty xd so 6';
+-- -- CÃ¡ch khÃ¡c:
+-- select distinct hoten_kts
+-- from cgtrinh c join  thietke k on k.stt_ctr=c.stt_ctr 
+-- where ten_thau='phong dich vu so xd' 
+-- INTERSECT -- phÃ©p giao táº­p há»£p
+-- select distinct hoten_kts
+-- from cgtrinh c join  thietke k on k.stt_ctr=c.stt_ctr 
+-- where ten_thau='cty xd so 6';
 
--- 24
-select distinct t.hoten_cn
-from  thamgia t  join cgtrinh cg on cg.stt_ctr=t.stt_ctr
-where tinh_thanh='can tho' and t.hoten_cn  NOT IN
-	(select t.hoten_cn
-	from  thamgia t  join cgtrinh cg on cg.stt_ctr=t.stt_ctr
-	where tinh_thanh='vinh long')
+-- -- 24
+-- select distinct t.hoten_cn
+-- from  thamgia t  join cgtrinh cg on cg.stt_ctr=t.stt_ctr
+-- where tinh_thanh='can tho' and t.hoten_cn  NOT IN
+-- 	(select t.hoten_cn
+-- 	from  thamgia t  join cgtrinh cg on cg.stt_ctr=t.stt_ctr
+-- 	where tinh_thanh='vinh long')
 	
--- CÃ¡ch khÃ¡c
-select distinct t.hoten_cn
-from  thamgia t  join cgtrinh cg on cg.stt_ctr=t.stt_ctr
-where tinh_thanh='can tho' 
-MINUS -- phÃ©p trá»« táº­p há»£p
-select t.hoten_cn
-from  thamgia t  join cgtrinh cg on cg.stt_ctr=t.stt_ctr
-where tinh_thanh='vinh long'
--- 25
-select ten_thau
-from  cgtrinh
-where kinh_phi > ALL 
-        (select kinh_phi 
-        from cgtrinh 
-        where ten_thau='phong dich vu so xd');
+-- -- CÃ¡ch khÃ¡c
+-- select distinct t.hoten_cn
+-- from  thamgia t  join cgtrinh cg on cg.stt_ctr=t.stt_ctr
+-- where tinh_thanh='can tho' 
+-- MINUS -- phÃ©p trá»« táº­p há»£p
+-- select t.hoten_cn
+-- from  thamgia t  join cgtrinh cg on cg.stt_ctr=t.stt_ctr
+-- where tinh_thanh='vinh long'
+-- -- 25
+-- select ten_thau
+-- from  cgtrinh
+-- where kinh_phi > ALL 
+--         (select kinh_phi 
+--         from cgtrinh 
+--         where ten_thau='phong dich vu so xd');
 
--- cÃ¡ch khÃ¡c
-select ten_thau
-from  cgtrinh
-where kinh_phi > 
-        (select max(kinh_phi) 
-        from cgtrinh 
-        where ten_thau='phong dich vu so xd')
--- 26
-select distinct hoten_kts
-from thietke 
-where  thu_lao < (select avg(thu_lao) from thietke)
+-- -- cÃ¡ch khÃ¡c
+-- select ten_thau
+-- from  cgtrinh
+-- where kinh_phi > 
+--         (select max(kinh_phi) 
+--         from cgtrinh 
+--         where ten_thau='phong dich vu so xd')
+-- -- 26
+-- select distinct hoten_kts
+-- from thietke 
+-- where  thu_lao < (select avg(thu_lao) from thietke)
 
--- 27
-select hoten_cn
-from thamgia
-group by hoten_cn having sum(so_ngay) >
-							(select sum(so_ngay) 
-                            from thamgia  
-                            where hoten_cn='nguyen hong van');
+-- -- 27
+-- select hoten_cn
+-- from thamgia
+-- group by hoten_cn having sum(so_ngay) >
+-- 							(select sum(so_ngay) 
+--                             from thamgia  
+--                             where hoten_cn='nguyen hong van');
 
--- 28 : PhÃ©p chia
-select * from cgtrinh
-select * from thamgia order by hoten_cn, stt_ctr
+-- -- 28 : PhÃ©p chia
+-- select * from cgtrinh
+-- select * from thamgia order by hoten_cn, stt_ctr
 
-select hoten_cn, count(*)
-from thamgia
-group by hoten_cn having count(*)=(select count(*) from cgtrinh);
+-- select hoten_cn, count(*)
+-- from thamgia
+-- group by hoten_cn having count(*)=(select count(*) from cgtrinh);
 
---cÃ¡ch khÃ¡c:
-select hoten_cn
-from congnhan c
-where NOT EXISTS
-  (select stt_ctr -- táº¥t cáº£ cÃ´ng trÃ¬nh
-  from cgtrinh
-  MINUS
-  select stt_ctr -- CÃ¡c cÃ´ng trÃ¬nh cá»§a 1 cong nhan, truwd ra rá»—ng nghÄ©a lÃ  cÃ³ tham gia táº¥t cáº£ cÃ´ng trinh
-  from thamgia t
-  where c.hoten_cn=t.hoten_cn
-  )
+-- --cÃ¡ch khÃ¡c:
+-- select hoten_cn
+-- from congnhan c
+-- where NOT EXISTS
+--   (select stt_ctr -- táº¥t cáº£ cÃ´ng trÃ¬nh
+--   from cgtrinh
+--   MINUS
+--   select stt_ctr -- CÃ¡c cÃ´ng trÃ¬nh cá»§a 1 cong nhan, truwd ra rá»—ng nghÄ©a lÃ  cÃ³ tham gia táº¥t cáº£ cÃ´ng trinh
+--   from thamgia t
+--   where c.hoten_cn=t.hoten_cn
+--   )
 
---29
-Create table c29 as
-    select stt_ctr 
-    from thamgia
-    where hoten_cn='nguyen hong van';
+-- --29
+-- Create table c29 as
+--     select stt_ctr 
+--     from thamgia
+--     where hoten_cn='nguyen hong van';
     
-select hoten_cn, count(*)
-from thamgia t join c29 c on c.stt_ctr=t.stt_ctr
-where hoten_cn <> 'nguyen hong van'
-group by hoten_cn having count(*)=( select count(*) from c29);
+-- select hoten_cn, count(*)
+-- from thamgia t join c29 c on c.stt_ctr=t.stt_ctr
+-- where hoten_cn <> 'nguyen hong van'
+-- group by hoten_cn having count(*)=( select count(*) from c29);
 
-drop table c29;
--- 30
-select distinct c1.ten_thau, c2.ten_thau
-from cgtrinh c1 , cgtrinh c2 
-where   c1.tinh_thanh=c2.tinh_thanh and c1.ten_thau > c2.ten_thau
--- 31
+-- drop table c29;
+-- -- 30
+-- select distinct c1.ten_thau, c2.ten_thau
+-- from cgtrinh c1 , cgtrinh c2 
+-- where   c1.tinh_thanh=c2.tinh_thanh and c1.ten_thau > c2.ten_thau
+-- -- 31
 
-select c1.hoten_cn, c2.hoten_cn
-from thamgia c1 join thamgia c2 on c1.stt_ctr=c2.stt_ctr 
-where c1.hoten_cn < c2.hoten_cn
-group by c1.hoten_cn , c2.hoten_cn having count(*)>1
+-- select c1.hoten_cn, c2.hoten_cn
+-- from thamgia c1 join thamgia c2 on c1.stt_ctr=c2.stt_ctr 
+-- where c1.hoten_cn < c2.hoten_cn
+-- group by c1.hoten_cn , c2.hoten_cn having count(*)>1
 
 
 
--- tim cong nhan tham gia tat ca cac ctr do thau ct xd so 6 thi cong
+-- -- tim cong nhan tham gia tat ca cac ctr do thau ct xd so 6 thi cong
 
-select hoten_cn, count(*) -- cn tham gia ctr do cty xd so 6 thi cong
-from cgtrinh c join thamgia  t on c.stt_ctr=t.stt_ctr 
-where ten_thau='cty xd so 6'
-group by hoten_cn having count(*)=(select count(*) 
-                        from cgtrinh 
-                        where ten_thau='cty xd so 6')
+-- select hoten_cn, count(*) -- cn tham gia ctr do cty xd so 6 thi cong
+-- from cgtrinh c join thamgia  t on c.stt_ctr=t.stt_ctr 
+-- where ten_thau='cty xd so 6'
+-- group by hoten_cn having count(*)=(select count(*) 
+--                         from cgtrinh 
+--                         where ten_thau='cty xd so 6')

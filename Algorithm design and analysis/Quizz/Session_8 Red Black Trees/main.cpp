@@ -383,6 +383,32 @@ void insert(int v)
 
 int result[1000];
 int idx = 0;
+
+int Partition(int A[], int low, int high){
+    int pivot = A[high];
+    int i = low - 1;
+    for(int j = low; j < high; j ++){
+        if(A[j]<=pivot){
+            i+=1;
+            int temp = A[i];
+            A[i] = A[j];
+            A[j] = temp;
+        }
+    }
+    int temp_1 = A[i+1];
+    A[i+1]=A[high];
+    A[high]=temp_1;
+    return i+1;
+}
+
+void quicksort(int A[], int low, int high){
+    if(low < high){
+        int p = Partition(A,low,high);
+        quicksort(A,low,p-1);
+        quicksort(A,p+1,high);
+    }
+}
+
 void inorder(Node *x)
 {
     if (x != NIL)
@@ -421,34 +447,31 @@ void print_detail(Node *x)
 int main()
 {
     init(); // BAT BUOC: phai goi truoc, de khoi tao NIL va root = NIL
-
+ 
     if (freopen("ex01.inp", "r", stdin) == NULL)
     {
         cerr << "ERROR CAN'T OPEN FILE ex01.inp" << endl;
         return 1;
     }
     cout << "OPEN file SUCESS" << endl;
-
+ 
     int n;
     cin >> n;
     cout << "Numbers of Node: " << n << endl;
-
+ 
     int a[105];
     for (int i = 0; i < n; i++)
-    {
         cin >> a[i];
-        insert(a[i]);
-    }
-
+ 
+    quicksort(a, 0, n - 1);
+ 
+    cout << "\nAfter sort: ";
     for (int i = 0; i < n; i++)
-    {
-        cout << "a[" << i + 1 << "]" << " = " << a[i] << "\n";
-    }
-    // root = buildBalanced(a, 0, n - 1);
-    // root->parent = NIL;
+        cout << a[i] << " ";
     cout << "\n";
-    cout << "Insert !!!!\n"
-         << endl;
+ 
+    root = buildBalanced(a, 0, n - 1);
+    root->parent = NIL;
 
     idx = 0;
     inorder(root);

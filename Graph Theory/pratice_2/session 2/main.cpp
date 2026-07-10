@@ -54,7 +54,7 @@ void DPS(Graph G, int x, int visited[]){
         visited[u] = 1;
         printf("%d\n",u);
         for(int v = 1; v<=G.n;v++){ 
-            if(G.A[u][v]&&visited[v]==0){
+            if(G.A[u][v]==1&&visited[v]==0){
                 push(&s,v);
             }
         }

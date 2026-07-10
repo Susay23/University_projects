@@ -14,3 +14,5 @@ lặp lại bước 1,2 đến khi ko còn tồn tại chu trình
 
 Cây khung có trọng lượng nhỏ nhất (Cây vô hướng) ->  thuật toán Kruskal 
 
+-- DFS cố gắng duyệt vào nhánh sâu nhất có thể 
+đi từ đỉnh bắt đầu (1) → di chuyển đến đỉnh nhỏ nhất kề với nó → cứ thế đi tiếp càng sâu càng tốt → đến khi không đi tiếp được (hết đỉnh kề chưa thăm) → quay lại (quay lui) để rẽ sang nhánh khác

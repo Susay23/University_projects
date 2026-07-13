@@ -33,7 +33,6 @@ void DFS(Graph *G, int start, int visited[])
         if (G->A[start][i] == 1 && visited[i] == 0)
         {
             DFS(G, i, visited);
-            visitedAll = 1;
         }
     }
 }

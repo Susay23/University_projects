@@ -1,21 +1,75 @@
-// Có n hòn đảo và m cây cầu. Mỗi cây cầu bắt qua 2 hòn đảo. Một hôm chúa đảo tự hỏi là với các cây cầu hiện tại thì đứng ở một hòn đảo bất kỳ có thể nào đi đến được tất cả các hòn đảo khác hay không.
+#include <stdio.h>
 
-// Hãy giúp chúa đảo viết chương trình kiểm tra.
+typedef struct
+{
+    int A[101][101];
+    int n;
+} Graph;
 
-// Đầu vào (Input):
+void init_graph(Graph *G, int n)
+{
+    G->n = n;
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= n; j++)
+        {
+            G->A[i][j] = 0;
+        }
+    }
+}
 
-// Dữ liệu đầu vào được nhập từ bàn phím với định dạng:
+void add_edge(Graph *G, int u, int v)
+{
+    G->A[u][v] = 1;
+    G->A[v][u] = 1;
+}
 
-// - Dòng đầu tiên chứa 2 số nguyên n và m, tương ứng là số đảo và số cây cầu.
+void DFS(Graph *G, int start, int visited[])
+{
+    visited[start] = 1;
+    int visitedAll = 0;
+    for (int i = 1; i <= G->n; i++)
+    {
+        if (G->A[start][i] == 1 && visited[i] == 0)
+        {
+            DFS(G, i, visited);
+            visitedAll = 1;
+        }
+    }
+}
 
-// - m dòng tiếp theo mỗi dòng chứa 2 số nguyên u v nói rằng có 1 cây cầu bắt qua hai hòn đảo u và v.
+int main()
+{
+    freopen("dt.txt", "r", stdin);
+    int n, m;
+    scanf("%d%d", &n, &m);
+    Graph G;
+    init_graph(&G, n);
+    int u, v;
+    for (int i = 0; i < m; i++)
+    {
+        scanf("%d%d", &u, &v);
+        add_edge(&G, u, v);
+    }
 
-// Đầu ra (Output):
-
-// Nếu có thể đi được in ra màn hình YES, ngược lại in ra NO.
-
-// Xem thêm ví dụ bên dưới.
-// 4 3
-// 1 2
-// 2 3
-// 3 4
+    int visited[101];
+    for (int i = 1; i <= n; i++)
+    {
+        if (visited[i] == 0)
+        {
+            DFS(&G, i, visited);
+        }
+    }
+    int visitedAll = 1;
+    for(int i = 1; i<=n;i++){
+        if(visited[i] == 0){
+            visitedAll = 0;
+            break;
+        }
+    }
+    if(visitedAll == 1){
+        printf("YES\n");
+    }else{
+        printf("NO");
+    }
+}

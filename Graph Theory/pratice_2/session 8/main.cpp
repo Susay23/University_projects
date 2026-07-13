@@ -1,28 +1,78 @@
-// // Tôn Ngộ Không là một trong các nhân vật chính của truyện Tây du ký. Khi còn ở Hoa Quả Sơn, Tôn Ngộ Không là vua của loài khỉ. Hoa Quả Sơn có rất nhiều cây ăn trái, nên loài khỉ rất thích. Do đặc tính của mình, khỉ không thích đi bộ mà chỉ thích chuyền từ cây này sang một cây khác. Tuy nhiên, nếu khoảng cách giữa hai cây quá xa thi chúng không thể chuyền qua lại được.
+#include <stdio.h>
 
-// // Đường đường là vua của loài khỉ, Tôn Ngộ Không muốn vạch ra một kế hoạch hái trái cây trên tất cả các cây có trên Hoa Quả Sơn mà không cần phải nhảy xuống đất. Tôn Ngộ Không dự định sẽ bắt đầu leo lên một cây, hái trái của cây này, sau đó chuyền qua một cây kế tiếp hái trái của này và tiếp tục như thế cho đến khi tất cả các cây đều được hái trái. Một cây có thể được chuyền qua chuyền lại nhiều lần.
+typedef struct
+{
+    int A[101][101];
+    int n;
+} Graph;
 
-// // Hãy giúp Tôn Ngộ Không kiểm tra xem kế hoạch này có thể thực hiện được không.
+void init_graph(Graph *G, int n)
+{
+    G->n = n;
+    for (int i = 0; i <= n; i++)
+    {
+        for (int j = 0; j <= n; j++){
+            G->A[i][j] = 0;
+        }
+    }
+}
 
-// // Đầu vào (Input):
+void add_edge(Graph *G, int u, int v)
+{
+    G->A[u][v] = 1;
+    G->A[v][u] = 1;
+}
 
-// // Giả sử số lượng cây ăn trái ở Hoa Quả Sơn là n cây và được đánh số từ 1 đến n.
+void DFS(Graph *G, int start, int vistied[])
+{
+    vistied[start] = 1;
+    for (int i = 1; i <= G->n; i++)
+    {
+        if (G->A[start][i] == 1 && vistied[i] == 0)
+        {
+            DFS(G, i, vistied);
+        }
+    }
+}
 
-// // Dữ liệu đầu vào được nhập từ bàn phím với định dạng:
+int main()
+{
+    freopen("dt.txt", "r", stdin);
+    int n, m;
+    scanf("%d%d", &n, &m);
+    Graph G;
+    init_graph(&G, n);
+    int u, v;
+    for (int i = 0; i < m; i++)
+    {
+        scanf("%d%d", &u, &v);
+        add_edge(&G, u, v);
+    }
 
-// // - Dòng đầu tiên chứa 2 số nguyên n và m, tương ứng là số cây và số cặp cây có thể chuyền qua lại.
+    int visited[101];
+    for (int i = 0; i <= n; i++)
+    {
+        if (visited[i] == 0)
+        {
+            DFS(&G, i, visited);
+        }
+    }
+    int vistiedAll = 1;
+    for (int i = 1; i <= n; i++)
+    {
+        if (visited[i] == 0)
+        {
+            vistiedAll = 0;
+            break;
+        }
+    }
 
-// // - m dòng tiếp theo mỗi dòng chứa 2 số nguyên u v nói rằng có thể chuyền từ cây u sang cây v hoặc chuyền từ cây v sang cây u.
-
-// // Đầu ra (Output):
-
-// // Nếu kế hoạch của Tôn Ngộ Không có thể thực hiện được DUOC, ngược lại in ra KHONG.
-
-// // Xem thêm ví dụ bên dưới. Trong ví dụ đầu tiên, Tôn Ngộ Không bắt đầu từ cây 1, chuyền qua cây 2, sau đó chuyền ngược về 1, chuyền tiếp sang 3 và sau cùng là sang 4.
-
-// For example:
-// 4 3
-// 2 1
-// 1 3
-// 3 4
-
+    if (vistiedAll == 1)
+    {
+        printf("DUOC\n");
+    }
+    else
+    {
+        printf("KHONG");
+    }
+}

@@ -27,7 +27,6 @@ void add_edge(Graph *G, int u, int v)
 void DFS(Graph *G, int start, int visited[])
 {
     visited[start] = 1;
-    int visitedAll = 0;
     for (int i = 1; i <= G->n; i++)
     {
         if (G->A[start][i] == 1 && visited[i] == 0)
@@ -51,14 +50,8 @@ int main()
         add_edge(&G, u, v);
     }
 
-    int visited[101];
-    for (int i = 1; i <= n; i++)
-    {
-        if (visited[i] == 0)
-        {
-            DFS(&G, i, visited);
-        }
-    }
+    int visited[101] = {0};
+    DFS(&G,1,visited);
     int visitedAll = 1;
     for(int i = 1; i<=n;i++){
         if(visited[i] == 0){
@@ -69,6 +62,6 @@ int main()
     if(visitedAll == 1){
         printf("YES\n");
     }else{
-        printf("NO");
+        printf("NO\n");
     }
 }

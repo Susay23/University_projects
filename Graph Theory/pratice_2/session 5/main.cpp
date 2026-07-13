@@ -47,11 +47,6 @@ void add_edge(Graph *G, int u, int v){
 void DFS(Graph G, int start, int visited[],int parent[],int parentNode){
     visited[start] = 1;
     parent[start] = 0;
-    if(parentNode == 0){
-        printf("%d có cha là %d => %d là gốc \n", start, parentNode, start);
-    }else{
-        printf("%d có cha là %d\n", start, parentNode);
-    }
     for(int i = 1; i<=G.n;i++){
         if(G.A[start][i] == 1 && visited[i] == 0){
             DFS(G,i,visited,parent,start);
@@ -79,6 +74,13 @@ int main(){
     for(int i = 1; i<=n;i++){
         if(visited[i] == 0){
             DFS(G,i,visited,parent,parentNode);
+        }
+    }
+    for(int i = 1; i <= n; i++){
+        if(parent[i] == 0){
+            printf("%d %d có cha là %d\n", i, parent[i]);
+        }else{
+            printf("%d %d\n", i, parent[i]);
         }
     }
 }

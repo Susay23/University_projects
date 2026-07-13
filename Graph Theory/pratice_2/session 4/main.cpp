@@ -58,11 +58,6 @@ void BFS(Graph *G, int start, int visited[], int parent[]){
 
     while(!isEmpty(&q)){
         int u = dequeue(&q);
-        if(parent[u] == 0){
-            printf("%d có cha là đỉnh %d => %d là đỉnh gốc \n", u, parent[u], u);
-        }else{
-            printf("%d có cha là đỉnh %d \n", u, parent[u]);
-        }
 
         for(int i = 1; i <= G->n; i++){
             if(G->A[u][i] == 1 && visited[i] == 0){
@@ -88,10 +83,18 @@ int main(){
         add_edge(&G, u, v);
     }
     int visited[101] = {0};
-    int parent[105];
+    int parent[105] = {0};
     for(int i = 1; i <= n; i ++){
         if(visited[i] == 0){
             BFS(&G,i,visited, parent);
+        }
+    }
+
+    for(int i = 1; i <= n; i++){
+        if(parent[i] == 0){
+            printf("%d %d có cha là %d\n", i, parent[i]);
+        }else{
+            printf("%d %d\n", i, parent[i]);
         }
     }
 }

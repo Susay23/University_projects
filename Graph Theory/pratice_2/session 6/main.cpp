@@ -19,18 +19,15 @@ void add_edge(Graph *G, int u, int v){
     G->A[v][u] = 1;
 }
 
-void DFS(Graph *G, int start, int visited[], int parent){
-    visited[start] = 1;
-    if(parent == 0){
-        printf("%d có đỉnh cha là %d => %d là gốc \n", start, parent, start);
-    }else{
-        printf("%d có đỉnh cha là %d\n", start, parent);
-    }   
+void DFS(Graph *G, int start, int visited[], int parent[]){
+    visited[start] = 1; 
     for(int i = 1; i<=G->n;i++){
         if(G->A[start][i] == 1 && visited[i] == 0){
-            DFS(G,i,visited,start);
+            parent[i] = start;
+            DFS(G,i,visited,parent);
         }
     }
+    
 }
 
 int main(){
@@ -46,10 +43,13 @@ int main(){
     }
 
     int visited[101];
-    int parent = 0;
+    int parent[101];
     for(int i = 1; i<=n;i++){
         if(visited[i] == 0){
             DFS(&G,i,visited,parent);
         }
+    }
+        for(int i = 1; i <= n; i++){
+        printf("%d %d\n", i, parent[i]);
     }
 }

@@ -49,14 +49,8 @@ int main()
         add_edge(&G, u, v);
     }
 
-    int visited[101];
-    for (int i = 0; i <= n; i++)
-    {
-        if (visited[i] == 0)
-        {
-            DFS(&G, i, visited);
-        }
-    }
+    int visited[101] = {0};
+    DFS(&G,1,visited);
     int vistiedAll = 1;
     for (int i = 1; i <= n; i++)
     {
@@ -73,6 +67,6 @@ int main()
     }
     else
     {
-        printf("KHONG");
+        printf("KHONG\n");
     }
 }

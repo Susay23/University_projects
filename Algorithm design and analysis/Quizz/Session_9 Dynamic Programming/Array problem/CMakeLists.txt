@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.28)
+project(Array_problem)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(session_9 main.cpp)
+configure_file(ex03.inp ex03.inp COPYONLY)

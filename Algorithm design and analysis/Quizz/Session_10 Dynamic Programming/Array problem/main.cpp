@@ -150,3 +150,41 @@ long long maxSubarray_bottomup(int &start, int &end){
     }
     return maxSum;
 }
+
+int main() {
+    freopen("ex03.inp", "r", stdin);
+    cin >> n;
+    a.assign(n, 0);
+    for (int i = 0; i < n; i++) cin >> a[i];
+ 
+    int start, end;
+ 
+    // ---- 1. Naive ----
+    auto t1 = high_resolution_clock::now();
+    long long sumNaive = maxSubarray(start, end);
+    auto t2 = high_resolution_clock::now();
+    cout << "[Naive / Brute-force O(n^2)]\n";
+    cout << "The maximum sum: " << sumNaive << "\n";
+    cout << "The sub array: "; printSubarray(start, end);
+    cout << "Time: " << duration<double, milli>(t2 - t1).count() << " ms\n\n";
+ 
+    // ---- 2. Memoized ----
+    auto t3 = high_resolution_clock::now();
+    long long sumMemo = maxSubarray_memo(start, end);
+    auto t4 = high_resolution_clock::now();
+    cout << "[Memoized DP O(n)]\n";
+    cout << "The maximum sum: " << sumMemo << "\n";
+    cout << "The sub array: "; printSubarray(start, end);
+    cout << "Time: " << duration<double, milli>(t4 - t3).count() << " ms\n\n";
+ 
+    // ---- 3. Bottom-up (Kadane) ----
+    auto t5 = high_resolution_clock::now();
+    long long sumBU = maxSubarray_bottomup(start, end);
+    auto t6 = high_resolution_clock::now();
+    cout << "[Bottom-up DP - Kadane O(n)]\n";
+    cout << "The maximum sum: " << sumBU << "\n";
+    cout << "The sub array: "; printSubarray(start, end);
+    cout << "Time: " << duration<double, milli>(t6 - t5).count() << " ms\n";
+ 
+    return 0;
+}

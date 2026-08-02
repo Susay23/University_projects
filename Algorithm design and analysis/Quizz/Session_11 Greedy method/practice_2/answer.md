@@ -39,3 +39,12 @@ Expected Length = 2.1 bits/symbol
 | 100 | 101 | 110 | 111 | 0   |
 
 ### Code table
+| Symbol | Frequency | Bit Length | Probability | Expected Length |
+| ------ | --------- | ---------- | ----------- | --------------- |
+| B      | 0.1       | 3          | 0.1         | 0.3             |
+| C      | 0.1       | 3          | 0.1         | 0.3             |
+| D      | 0.15      | 3          | 0.15        | 0.45            |
+| A      | 0.2       | 3          | 0.2         | 0.6             |
+| E      | 0.45      | 1          | 0.45        | 0.45            |
+
+Expected Length = 2.1 bits/symbol

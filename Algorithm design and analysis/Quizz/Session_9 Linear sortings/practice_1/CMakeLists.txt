@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
 project(Linear_sortings)
 set(CMAKE_CXX_STANDARD 17)
-add_executable(session_11 main.cpp)
+add_executable(session_9 main.cpp)
 configure_file(ex01.inp ex01.inp COPYONLY)

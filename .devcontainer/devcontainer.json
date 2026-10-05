@@ -2,20 +2,20 @@
     "name": "University Project Dev Container",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
     "features": {
-        "ghcr.io/devcontainers/features/common-utils:2.5.9": {
+        "ghcr.io/devcontainers/features/common-utils:latest": {
             "version": "latest",
             "configureZshAsDefaultShell": true
         },
-        "ghcr.io/devcontainers/features/java:1.8.0": {
+        "ghcr.io/devcontainers/features/java:latest": {
             "version": "21"
         },
-        "ghcr.io/devcontainer-community/devcontainer-features/collection-c-cpp:1.0.3": {
+        "ghcr.io/devcontainer-community/devcontainer-features/collection-c-cpp:latest": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/powershell:2.0.2": {
+        "ghcr.io/devcontainers/features/powershell:latest": {
             "version": "latest"
         },
-        "ghcr.io/devcontainers/features/sshd:1.1.0": {
+        "ghcr.io/devcontainers/features/sshd:latest": {
             "version": "latest"
         },
         "ghcr.io/devcontainers/features/docker-in-docker": {

@@ -39,12 +39,12 @@ static vector<std::byte> byteUnstuff(const vector<std::byte>& stream, std::byte 
     for (size_t i = 0; i < stream.size(); i++) {
         std::byte b = stream[i];
         if (!inFrame) {
-            if (b == flag) inFrame = true;        // gap co mo khung
+            if (b == flag) inFrame = true;        
         } else if (b == esc) {
-            i++;                                  // byte sau ESC la du lieu that, kể cả khi no trung FLAG
+            i++;                                  
             if (i < stream.size()) out.push_back(stream[i]);
         } else if (b == flag) {
-            inFrame = false;                      // gap co dong khung
+            inFrame = false;                      
         } else {
             out.push_back(b);
         }

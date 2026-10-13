@@ -119,7 +119,6 @@ int framing_bits(char* filename, int len) {
         string fr = bitStuffFrame(&data[pos], n);
         count++;
         printf("Khung %d (%d byte du lieu): %s\n", count, n, fr.c_str());
-        // doi chieu voi chuoi bit goc cua khung nay
         string orig;
         for (int i = 0; i < n; i++)
            for (int k = 7; k >= 0; k--) 

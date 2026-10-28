@@ -1,0 +1,2 @@
+ifconfig eth0 hw ether 00:00:00:00:77:40
+ifconfig eth0 10.0.0.44 netmask 255.255.255.0 up

@@ -1,0 +1,674 @@
+[
+  {
+    "item_number": "SCP-002",
+    "number": 2,
+    "name": "The \"Living\" Room",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-002"
+  },
+  {
+    "item_number": "SCP-003",
+    "number": 3,
+    "name": "Biological Motherboard",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-003"
+  },
+  {
+    "item_number": "SCP-004",
+    "number": 4,
+    "name": "The 12 Rusty Keys and the Door",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-004"
+  },
+  {
+    "item_number": "SCP-005",
+    "number": 5,
+    "name": "Skeleton Key",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-005"
+  },
+  {
+    "item_number": "SCP-006",
+    "number": 6,
+    "name": "Fountain of Youth",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-006"
+  },
+  {
+    "item_number": "SCP-007",
+    "number": 7,
+    "name": "Abdominal Planet",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-007"
+  },
+  {
+    "item_number": "SCP-008",
+    "number": 8,
+    "name": "Zombie Plague",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-008"
+  },
+  {
+    "item_number": "SCP-009",
+    "number": 9,
+    "name": "Red Ice",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-009"
+  },
+  {
+    "item_number": "SCP-010",
+    "number": 10,
+    "name": "Collars of Control",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-010"
+  },
+  {
+    "item_number": "SCP-011",
+    "number": 11,
+    "name": "Sentient Civil War Memorial Statue",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-011"
+  },
+  {
+    "item_number": "SCP-012",
+    "number": 12,
+    "name": "A Bad Composition",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-012"
+  },
+  {
+    "item_number": "SCP-013",
+    "number": 13,
+    "name": "Blue Lady Cigarettes",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-013"
+  },
+  {
+    "item_number": "SCP-014",
+    "number": 14,
+    "name": "The Concrete Man",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-014"
+  },
+  {
+    "item_number": "SCP-015",
+    "number": 15,
+    "name": "Pipe Nightmare",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-015"
+  },
+  {
+    "item_number": "SCP-016",
+    "number": 16,
+    "name": "Sentient Micro-Organism",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-016"
+  },
+  {
+    "item_number": "SCP-017",
+    "number": 17,
+    "name": "Shadow Person",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-017"
+  },
+  {
+    "item_number": "SCP-018",
+    "number": 18,
+    "name": "Super Ball",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-018"
+  },
+  {
+    "item_number": "SCP-019",
+    "number": 19,
+    "name": "The Monster Pot",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-019"
+  },
+  {
+    "item_number": "SCP-020",
+    "number": 20,
+    "name": "Unseen Mold",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-020"
+  },
+  {
+    "item_number": "SCP-021",
+    "number": 21,
+    "name": "Skin Wyrm",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-021"
+  },
+  {
+    "item_number": "SCP-022",
+    "number": 22,
+    "name": "The Morgue",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-022"
+  },
+  {
+    "item_number": "SCP-023",
+    "number": 23,
+    "name": "Black Shuck",
+    "object_class": null,
+    "source_url": "https://scp-wiki.wikidot.com/scp-023"
+  },
+  {
+    "item_number": "SCP-024",
+    "number": 24,
+    "name": "Game Show of Death",
+    "object_class": null,
+    "source_url": "https://scp-wiki.wikidot.com/scp-024"
+  },
+  {
+    "item_number": "SCP-025",
+    "number": 25,
+    "name": "A Well-Worn Wardrobe",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-025"
+  },
+  {
+    "item_number": "SCP-026",
+    "number": 26,
+    "name": "Afterschool Retention",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-026"
+  },
+  {
+    "item_number": "SCP-027",
+    "number": 27,
+    "name": "The Vermin God",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-027"
+  },
+  {
+    "item_number": "SCP-028",
+    "number": 28,
+    "name": "Knowledge",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-028"
+  },
+  {
+    "item_number": "SCP-030",
+    "number": 30,
+    "name": "The Homunculus",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-030"
+  },
+  {
+    "item_number": "SCP-031",
+    "number": 31,
+    "name": "What is Love?",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-031"
+  },
+  {
+    "item_number": "SCP-032",
+    "number": 32,
+    "name": "Brothers' Bride",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-032"
+  },
+  {
+    "item_number": "SCP-033",
+    "number": 33,
+    "name": "The Missing Number",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-033"
+  },
+  {
+    "item_number": "SCP-034",
+    "number": 34,
+    "name": "Obsidian Ritual Knife",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-034"
+  },
+  {
+    "item_number": "SCP-035",
+    "number": 35,
+    "name": "Possessive Mask",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-035"
+  },
+  {
+    "item_number": "SCP-036",
+    "number": 36,
+    "name": "The Reincarnation Pilgrimage of the Yazidi (Kiras Guhorîn)",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-036"
+  },
+  {
+    "item_number": "SCP-037",
+    "number": 37,
+    "name": "Dwarf Star",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-037"
+  },
+  {
+    "item_number": "SCP-038",
+    "number": 38,
+    "name": "The Everything Tree",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-038"
+  },
+  {
+    "item_number": "SCP-039",
+    "number": 39,
+    "name": "Monkey Brain",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-039"
+  },
+  {
+    "item_number": "SCP-040",
+    "number": 40,
+    "name": "Evolution's Child",
+    "object_class": "Anomalous Human",
+    "source_url": "https://scp-wiki.wikidot.com/scp-040"
+  },
+  {
+    "item_number": "SCP-041",
+    "number": 41,
+    "name": "Thought-Broadcasting Patient",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-041"
+  },
+  {
+    "item_number": "SCP-042",
+    "number": 42,
+    "name": "A Formerly Winged Horse",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-042"
+  },
+  {
+    "item_number": "SCP-043",
+    "number": 43,
+    "name": "The Beatle",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-043"
+  },
+  {
+    "item_number": "SCP-044",
+    "number": 44,
+    "name": "World War II Era Molecular-Fission Cannon",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-044"
+  },
+  {
+    "item_number": "SCP-045",
+    "number": 45,
+    "name": "Atmospheric Converter",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-045"
+  },
+  {
+    "item_number": "SCP-046",
+    "number": 46,
+    "name": "\"Predatory\" Holly Bush",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-046"
+  },
+  {
+    "item_number": "SCP-047",
+    "number": 47,
+    "name": "Microbial Mutagen",
+    "object_class": null,
+    "source_url": "https://scp-wiki.wikidot.com/scp-047"
+  },
+  {
+    "item_number": "SCP-048",
+    "number": 48,
+    "name": "The Cursed SCP Number",
+    "object_class": "None (see description)",
+    "source_url": "https://scp-wiki.wikidot.com/scp-048"
+  },
+  {
+    "item_number": "SCP-049",
+    "number": 49,
+    "name": "Plague Doctor",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-049"
+  },
+  {
+    "item_number": "SCP-051",
+    "number": 51,
+    "name": "Japanese Obstetrical Model",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-051"
+  },
+  {
+    "item_number": "SCP-052",
+    "number": 52,
+    "name": "Time-Traveling Train",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-052"
+  },
+  {
+    "item_number": "SCP-053",
+    "number": 53,
+    "name": "Young Girl",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-053"
+  },
+  {
+    "item_number": "SCP-054",
+    "number": 54,
+    "name": "Water Nymph",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-054"
+  },
+  {
+    "item_number": "SCP-055",
+    "number": 55,
+    "name": "[unknown]",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-055"
+  },
+  {
+    "item_number": "SCP-056",
+    "number": 56,
+    "name": "A Beautiful Person",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-056"
+  },
+  {
+    "item_number": "SCP-057",
+    "number": 57,
+    "name": "The Daily Grind",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-057"
+  },
+  {
+    "item_number": "SCP-058",
+    "number": 58,
+    "name": "Heart of Darkness",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-058"
+  },
+  {
+    "item_number": "SCP-059",
+    "number": 59,
+    "name": "Radioactive Mineral",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-059"
+  },
+  {
+    "item_number": "SCP-060",
+    "number": 60,
+    "name": "Infernal Occult Skeleton",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-060"
+  },
+  {
+    "item_number": "SCP-061",
+    "number": 61,
+    "name": "Auditory Mind Control",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-061"
+  },
+  {
+    "item_number": "SCP-062",
+    "number": 62,
+    "name": "\"Quantum\" Computer",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-062"
+  },
+  {
+    "item_number": "SCP-063",
+    "number": 63,
+    "name": "\"The World's Best TothBrush\"",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-063"
+  },
+  {
+    "item_number": "SCP-064",
+    "number": 64,
+    "name": "Flawed von Neumann Structure",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-064"
+  },
+  {
+    "item_number": "SCP-065",
+    "number": 65,
+    "name": "Destroyed Organic Catalyst",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-065"
+  },
+  {
+    "item_number": "SCP-066",
+    "number": 66,
+    "name": "Eric's Toy",
+    "object_class": "Safe-prodest Euclid-impetus",
+    "source_url": "https://scp-wiki.wikidot.com/scp-066"
+  },
+  {
+    "item_number": "SCP-067",
+    "number": 67,
+    "name": "The Artist's Pen",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-067"
+  },
+  {
+    "item_number": "SCP-068",
+    "number": 68,
+    "name": "The Wire Figure",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-068"
+  },
+  {
+    "item_number": "SCP-069",
+    "number": 69,
+    "name": "Second Chance",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-069"
+  },
+  {
+    "item_number": "SCP-070",
+    "number": 70,
+    "name": "Iron Wings",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-070"
+  },
+  {
+    "item_number": "SCP-071",
+    "number": 71,
+    "name": "Degenerative Metamorphic Entity",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-071"
+  },
+  {
+    "item_number": "SCP-072",
+    "number": 72,
+    "name": "The Foot of the Bed",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-072"
+  },
+  {
+    "item_number": "SCP-073",
+    "number": 73,
+    "name": "\"Cain\"",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-073"
+  },
+  {
+    "item_number": "SCP-074",
+    "number": 74,
+    "name": "Quantum Woodlouse",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-074"
+  },
+  {
+    "item_number": "SCP-075",
+    "number": 75,
+    "name": "Corrosive Snail",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-075"
+  },
+  {
+    "item_number": "SCP-076",
+    "number": 76,
+    "name": "\"Able\"",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-076"
+  },
+  {
+    "item_number": "SCP-077",
+    "number": 77,
+    "name": "Rot Skull",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-077"
+  },
+  {
+    "item_number": "SCP-078",
+    "number": 78,
+    "name": "Guilt",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-078"
+  },
+  {
+    "item_number": "SCP-079",
+    "number": 79,
+    "name": "Old AI",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-079"
+  },
+  {
+    "item_number": "SCP-080",
+    "number": 80,
+    "name": "Dark Form",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-080"
+  },
+  {
+    "item_number": "SCP-081",
+    "number": 81,
+    "name": "Spontaneous Combustion Virus",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-081"
+  },
+  {
+    "item_number": "SCP-082",
+    "number": 82,
+    "name": "\"Fernand\" the Cannibal",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-082"
+  },
+  {
+    "item_number": "SCP-083",
+    "number": 83,
+    "name": "An Abandoned Row Home",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-083"
+  },
+  {
+    "item_number": "SCP-084",
+    "number": 84,
+    "name": "Static Tower",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-084"
+  },
+  {
+    "item_number": "SCP-085",
+    "number": 85,
+    "name": "Hand-drawn \"Cassy\"",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-085"
+  },
+  {
+    "item_number": "SCP-086",
+    "number": 86,
+    "name": "The Office of Dr. [REDACTED]",
+    "object_class": "Safe Euclid Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-086"
+  },
+  {
+    "item_number": "SCP-087",
+    "number": 87,
+    "name": "The Stairwell",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-087"
+  },
+  {
+    "item_number": "SCP-088",
+    "number": 88,
+    "name": "The Lizard King",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-088"
+  },
+  {
+    "item_number": "SCP-089",
+    "number": 89,
+    "name": "Tophet",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-089"
+  },
+  {
+    "item_number": "SCP-090",
+    "number": 90,
+    "name": "Apocorubik's Cube",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-090"
+  },
+  {
+    "item_number": "SCP-091",
+    "number": 91,
+    "name": "Nostalgia",
+    "object_class": "Anomalous Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-091"
+  },
+  {
+    "item_number": "SCP-092",
+    "number": 92,
+    "name": "\"The Best of The 5th Dimension\"",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-092"
+  },
+  {
+    "item_number": "SCP-093",
+    "number": 93,
+    "name": "Red Sea Object",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-093"
+  },
+  {
+    "item_number": "SCP-094",
+    "number": 94,
+    "name": "Miniature Event Horizon",
+    "object_class": "Keter",
+    "source_url": "https://scp-wiki.wikidot.com/scp-094"
+  },
+  {
+    "item_number": "SCP-095",
+    "number": 95,
+    "name": "The Atomic Adventures of Ronnie Ray-Gun",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-095"
+  },
+  {
+    "item_number": "SCP-096",
+    "number": 96,
+    "name": "The \"Shy Guy\"",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-096"
+  },
+  {
+    "item_number": "SCP-097",
+    "number": 97,
+    "name": "Old Fairgrounds",
+    "object_class": "Euclid",
+    "source_url": "https://scp-wiki.wikidot.com/scp-097"
+  },
+  {
+    "item_number": "SCP-098",
+    "number": 98,
+    "name": "Surgeon Crabs",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-098"
+  },
+  {
+    "item_number": "SCP-099",
+    "number": 99,
+    "name": "The Portrait",
+    "object_class": "Safe",
+    "source_url": "https://scp-wiki.wikidot.com/scp-099"
+  }
+]

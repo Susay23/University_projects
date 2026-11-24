@@ -1,0 +1,6 @@
+# Chu thich: daemons ho tro: bgpd zebra ospfd ripd...
+zebra=yes
+ripd=yes
+# Neu la no, co the khong can khai bao
+bgpd=no
+ospfd=no
